@@ -3,7 +3,7 @@ package br.com.alura.desafioliteralura.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class DataConvert implements InterfaceConvert {
+public class DataConverte implements InterfaceConvert {
     private ObjectMapper mapper = new ObjectMapper();
 
     @Override

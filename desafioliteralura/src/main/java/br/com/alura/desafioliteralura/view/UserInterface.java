@@ -7,15 +7,14 @@ import br.com.alura.desafioliteralura.model.Livro;
 import br.com.alura.desafioliteralura.repository.AutorRepository;
 import br.com.alura.desafioliteralura.repository.LivroRepository;
 import br.com.alura.desafioliteralura.service.ApiLivro;
-import br.com.alura.desafioliteralura.service.DataConvert;
-import org.hibernate.metamodel.internal.AbstractPojoInstantiator;
+import br.com.alura.desafioliteralura.service.DataConverte;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
 public class UserInterface {
     ApiLivro consumoApi = new ApiLivro();
-    DataConvert converteJson = new DataConvert();
+    DataConverte converteJson = new DataConverte();
     String URL = "https://gutendex.com/books/?search=";
     Scanner scanner = new Scanner(System.in);
     int menuNumber = 0;
@@ -30,6 +29,7 @@ public class UserInterface {
     }
 
     public void printMenu() {
+        var opcao = 0 ;
         while (menuNumber != 6) {
             var menu = """
                     *** Escolha o número de sua opção: ***                    
@@ -42,7 +42,8 @@ public class UserInterface {
                     6 - Sair
                     """;
             System.out.println("Selecione uma opção");
-            menuNumber = scanner.nextInt();
+            opcao = scanner.nextInt();
+            scanner.nextLine();
 
             if (menuNumber == 1) {
                 System.out.println("Digite o título do livro");

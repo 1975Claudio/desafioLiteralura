@@ -23,51 +23,51 @@ public class Livro {
         this.numeroDownloads = livro.numeroDownloads();
     }
 
-        public Integer getId () {
-            return id;
-        }
-
-        public void setId (Integer id){
-            this.id = id;
-        }
-
-        public String getTitulo () {
-            return titulo;
-        }
-
-        public void setTitulo (String titulo){
-            this.titulo = titulo;
-        }
-
-        public Integer getAutor_id () {
-            return autor_id;
-        }
-
-        public void setAutor_id (Integer autor_id){
-            this.autor_id = autor_id;
-        }
-
-        public Integer getNumeroDownloads () {
-            return numeroDownloads;
-        }
-
-        public void setNumeroDownloads (Integer numeroDownloads){
-            this.numeroDownloads = numeroDownloads;
-        }
-
-        public String getIdioma () {
-            return idioma;
-        }
-
-        public void setIdioma (String idioma){
-            this.idioma = idioma;
-        }
-        @Override
-        public String toString () {
-            return " titulo='" + titulo + '\'' +
-                    ", autor_id=" + autor_id +
-                    ", idioma='" + idioma + '\'' +
-                    ", numeroDownloads=" + numeroDownloads;
-        }
+    public Integer getId () {
+        return id;
     }
+
+    public void setId (Integer id){
+        this.id = id;
+    }
+
+    public String getTitulo () {
+        return titulo;
+    }
+
+    public void setTitulo (String titulo){
+        this.titulo = titulo;
+    }
+
+    public Integer getAutor_id () {
+        return autor_id;
+    }
+
+    public void setAutor_id (Integer autor_id){
+        this.autor_id = autor_id;
+    }
+
+    public Integer getNumeroDownloads () {
+        return numeroDownloads;
+    }
+
+    public void setNumeroDownloads (Integer numeroDownloads){
+        this.numeroDownloads = numeroDownloads;
+    }
+
+    public String getIdioma () {
+        return idioma;
+    }
+
+    public void setIdioma (String idioma){
+        this.idioma = idioma;
+    }
+    @Override
+    public String toString () {
+        return " titulo='" + titulo + '\'' +
+                ", autor_id=" + autor_id +
+                ", idioma='" + idioma + '\'' +
+                ", numeroDownloads=" + numeroDownloads;
+    }
+}
 

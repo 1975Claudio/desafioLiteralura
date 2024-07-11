@@ -10,19 +10,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DesafioliteraluraApplication implements CommandLineRunner {
-	@Autowired
-	private LivroRepository repository;
-	@Autowired
-	private AutorRepository autorRepository;
+    @Autowired
+    private LivroRepository repository;
+    @Autowired
+    private AutorRepository autorRepository;
 
-	public static void main(String[] args) {
-
-		SpringApplication.run(DesafioliteraluraApplication.class, args);
-	}
-
-	@Override
-	public void run(String... args) throws Exception {
-		UserInterface screenMenu = new UserInterface (repository, autorRepository);
+    @Override
+    public void run(String... args) throws Exception {
+        UserInterface screenMenu = new UserInterface(repository, autorRepository);
+        screenMenu.printMenu();
+    }
+    public static void main(String[] args) {
+        SpringApplication.run(DesafioliteraluraApplication.class, args);
+    }
 }
 
-}
