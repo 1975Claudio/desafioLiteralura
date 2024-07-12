@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Table (name = "livros")
 public class Livro {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
     private Integer id;
     private String titulo;

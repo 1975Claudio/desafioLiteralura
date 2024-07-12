@@ -7,14 +7,14 @@ import br.com.alura.desafioliteralura.model.Livro;
 import br.com.alura.desafioliteralura.repository.AutorRepository;
 import br.com.alura.desafioliteralura.repository.LivroRepository;
 import br.com.alura.desafioliteralura.service.ApiLivro;
-import br.com.alura.desafioliteralura.service.DataConverte;
+import br.com.alura.desafioliteralura.service.DateConvert;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
 public class UserInterface {
     ApiLivro consumoApi = new ApiLivro();
-    DataConverte converteJson = new DataConverte();
+    DateConvert converteJson = new DateConvert();
     String URL = "https://gutendex.com/books/?search=";
     Scanner scanner = new Scanner(System.in);
     int menuNumber = 0;
@@ -54,23 +54,23 @@ public class UserInterface {
             opcao = scanner.nextInt();
             scanner.nextLine();
 
-            if (menuNumber == 1) {
+            if (opcao == 1) {
                 System.out.println("Digite o título do livro");
                 scanner.nextLine();
                 var tituloLivro = scanner.nextLine();
                 SelectLivroFromApi(tituloLivro);
             }
-            if (menuNumber == 2) {
+            if (opcao == 2) {
                 System.out.println("Livros registrados:");
                 SelectAllLivro();
             }
 
-            if (menuNumber == 3) {
+            if (opcao == 3) {
                 System.out.println("Autores registrados:");
                 SelectAllAutor();
             }
 
-            if (menuNumber == 4) {
+            if (opcao == 4) {
                 System.out.println("Digite o ano de falecimento:");
                 Integer anoSelected = scanner.nextInt();
 
@@ -81,7 +81,7 @@ public class UserInterface {
                 }
             }
 
-            if (menuNumber == 5) {
+            if (opcao == 5) {
                 System.out.println("1 = PORTUGUES");
                 System.out.println("2 = INGLES");
                 System.out.println("SELECIONE O IDIOMA:");
@@ -111,7 +111,7 @@ public class UserInterface {
         }
     }
 
-    private void InsertAutor(Integer autorid, String nome, Integer dtnascimento, Integer dtfalecimento) {
+    private void InsertAutor(Integer id, String nome, Integer anoNascimento, Integer anoFalecimento) {
         Autor autor = new Autor();
 
         try {
