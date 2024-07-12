@@ -1,13 +1,12 @@
 package br.com.alura.desafioliteralura.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "autores")
 public class Autor {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Integer id;
     private String nome;
     private Integer anoNascimento;

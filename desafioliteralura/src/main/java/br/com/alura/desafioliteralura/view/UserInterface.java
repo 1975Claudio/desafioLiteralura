@@ -31,16 +31,25 @@ public class UserInterface {
     public void printMenu() {
         var opcao = 0 ;
         while (menuNumber != 6) {
-            var menu = """
-                    *** Escolha o número de sua opção: ***                    
-                                        
-                    1- Buscar livro pelo título
-                    2- Listar livros registrados
-                    3- Listar autores registrados
-                    4- Listar autores vivos em um determinado ano
-                    5- Listar livros em um determinado idioma                            
-                    6 - Sair
-                    """;
+            System.out.println("*** Escolha o número de sua opção: *** ");
+            System.out.println("1- Buscar livro pelo título");
+            System.out.println("2- Listar livros registrados");
+            System.out.println("3- Listar autores registrados");
+            System.out.println("4- Listar autores vivos em um determinado ano");
+            System.out.println("5- Listar livros em um determinado idioma ");
+            System.out.println("6 - Sair");
+
+           // var menu = """
+//
+//                    *** Escolha o número de sua opção: ***
+//
+//                    1- Buscar livro pelo título
+//                    2- Listar livros registrados
+//                    3- Listar autores registrados
+//                    4- Listar autores vivos em um determinado ano
+//                    5- Listar livros em um determinado idioma
+//                    6 - Sair
+//                    """;
             System.out.println("Selecione uma opção");
             opcao = scanner.nextInt();
             scanner.nextLine();
